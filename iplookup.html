@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>DaoTran - LookupIP</title>
+    <meta charset="utf-8" />
+	<meta name="author" content="DaoTran" />
+	<link href="https://fonts.googleapis.com/css?family=Coiny|Rancho" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/img/favicons/favicon.png" />
+	<link rel="stylesheet" href="assets/css/style.css" />
+	<meta name="viewport" content="width=device-width, inital-scale=1">
+	<script type="text/javascript" src="/assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+    
+
+</head>
+<body>
+    <div class="first">
+    <h2 id="tieude"><a href="index.html" target="_self" title="Go Home">Trần Văn Đạo</a></h2>
+    <!-- searrch -->
+    <div class="box">
+        <form method=GET action="https://www.google.com/search">
+            <input type="search" name=q size=40 maxlength=255 value="" placeholder="Tìm Trên Google" autocomplete="off" />
+            <input type="submit" name=btng value="Tìm kiếm" />
+        </form>
+    </div>
+    <!-- end search -->
+    </div>
+    <div class="main">       
+        <div class="search_ip"><!-- start search info ip-->
+            <h2>Lookup IP address localtion</h2>
+            <div class="box_search">
+            
+                <label for="type_ip">IP Lookup</label>  
+                <input type="search" name="ip" id="type_ip" value=""  placeholder="Enter Public IP" autocomplete="off" required="required" autofocus/>
+                <input type="button" name="submit" onclick="check()" value="Check" />
+            
+            </div>
+            <div class="info_search" id="info_search">
+                <h2>Search info </h2>
+                <ul> 
+                    <!--<li>Status: <span class="span_info" id="search_message"></span></li>  -->
+                    <li>IP Public: <span class="span_info" id="search_ippublic"></span></li>
+                    <li>ISP: <span class="span_info" id="search_organisation"></span></li>
+                    <li>Domain: <span class="span_info" id="search_domain"></span></li>
+                    <li>IP Route: <span class="span_info" id="search_route"></span></li>
+                    <li>City: <span class="span_info" id="search_city"></span></li>
+                    <li>Region: <span class="span_info" id="search_region"></span></li>
+                    <li>Region Code: <span class="span_info" id="search_region_code"></span></li>
+                    <li>Country Name: <span class="span_info" id="search_country_name"></span></li>
+                    <li>Country Came: <span class="span_info" id="search_country_code"></span></li>
+                    <li>Continent Code: <span class="span_info" id="search_continent_name"></span></li>
+                    <li>Continent Code: <span class="span_info" id="search_continent_code"></span></li> 
+                    <li>Calling Code: <span class="span_info" id="search_calling_code"></span></li>
+                    <li>Postal: <span class="span_info" id="search_postal"></span> </li> 
+                    <li>Flag: <span class="span_info" id="search_flag"></span></li>
+                    <li>Languages: <span class="span_info" id="search_language"></span></li>
+                    <li>Currency name: <span class="span_info" id="search_currency_name"></span></li>
+                    <li>Currency Code: <span class="span_info" id="search_currency_code"></span></li>
+                    <li>Time Zone: <span class="span_info" id="search_time_zone"></span></li>
+                    
+                </ul>
+            </div>
+        </div><!-- end search info ip-->
+    </div>
+</body>
+</html>

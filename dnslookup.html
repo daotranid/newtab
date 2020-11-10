@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>DaoTran - DNS Lookup</title>
+    <meta charset="utf-8" />
+	<meta name="author" content="DaoTran" />
+	<link href="https://fonts.googleapis.com/css?family=Coiny|Rancho" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/img/favicons/favicon.png" />
+	<link rel="stylesheet" href="assets/css/style.css" />
+	<meta name="viewport" content="width=device-width, inital-scale=1">
+	<script type="text/javascript" src="/assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+    
+
+</head>
+<body>
+    <div class="first">
+    <h2 id="tieude"><a href="index.html" target="_self" title="Go Home">Trần Văn Đạo</a></h2>
+    <!-- searrch -->
+    <div class="box">
+        <form method=GET action="https://www.google.com/search">
+            <input type="search" name=q size=40 maxlength=255 value="" placeholder="Tìm Trên Google" autocomplete="off" />
+            <input type="submit" name=btng value="Tìm kiếm" />
+        </form>
+    </div>
+    <!-- end search -->
+    </div>
+    <div class="main">
+        <div class="dnslookup">
+            <h2>Resolve DNS</h2>
+            <div class="dns_search">
+            
+                <label for="dns_name">DNS lookup</label> 
+                <input type="search" name="ip" id="dns_name" value=""  placeholder="Enter Domain Name" autocomplete="off" required="required" autofocus/>
+                <select id="type_record" onclick="dnslookup()">
+                    <option value="A">A</option>
+                    <option value="CNAME">CNAME</option>
+                    <option value="MX">MX</option>
+                    <option value="NS">NS</option>
+                    <option value="PTR">PTR</option>
+                    <option value="SOA">SOA</option>
+                    <option value="SRV">SRV</option>
+                    <option value="TXT">TXT</option>
+                </select>
+                <input type="button" name="submit" onclick="dnslookup()" value="Check"/>
+                <input type="reset" name="reset" value="Reset" onClick="window.location.reload()" />
+            </div>
+            
+            <div class="info" id="a_info">
+                <h2>Record A info </h2>
+                <ul>
+                    <li>Domain: <span class="span_info" id="a_domain"></span></li>
+                    <li>IP: <span class="span_info" id="a_ip1"></span><span class="span_info" id="a_ip2"></span><span class="span_info" id="a_ip3"></span></li>
+                </ul>
+            </div>
+            <div class="info" id="cname_info">
+                <h2>Record CNANE info </h2>
+                <ul>
+                    <li>Domain: <span class="span_info" id="cname_domain"></span></li>
+                    <li>Data: <span class="span_info" id="cname_data"></span></li>
+                </ul>
+            </div>
+            <div class="info" id="mx_info">
+                <h2>Record MX info </h2>
+                <ul>
+                    <li>Domain: <span class="span_info" id="mx_domain"></span></li>
+                    <li>MX: <span class="span_info" id="mx_data1"></span><span class="span_info" id="mx_data2"></span><span class="span_info" id="mx_data3"></span><span class="span_info" id="mx_data4"></span><span class="span_info" id="mx_data5"></span><span class="span_info" id="mx_data6"></span></li>
+                </ul>
+            </div>
+            <div class="info" id="ns_info">
+                <h2>Record NS info </h2>
+                <ul>
+                    <li>Domain: <span class="span_info" class="span_info" id="ns_domain"></span></li>
+                    <li>NS: <span class="span_info" id="ns_data1"></span><span class="span_info" id="ns_data2"></span><span class="span_info" id="ns_data3"></span><span class="span_info" id="ns_data4"></span><span class="span_info" id="ms_data5"></span><span class="span_info" id="ns_data6"></span></li>
+                </ul>
+            </div>
+            <div class="info" id="ptr_info">
+                <h2>Record PTR info </h2>
+                <ul>
+                    <li>Domain: <span class="span_info" id="ptr_domain"></span></li>
+                    <li>PTR: <span class="span_info" id="ptr_data"></span></li>
+                </ul>
+            </div>
+            <div class="info" id="soa_info">
+                <h2>Record SOA info </h2>
+                <ul>
+                    <li>Domain: <span class="span_info" id="soa_domain"></span></li>
+                    <li>SOA: <span class="span_info" id="soa_data"></span></li>
+                </ul>
+            </div>
+            <div class="info" id="srv_info">
+                <h2>Record SRV info </h2>
+                <ul>
+                    <li>Domain: <span class="span_info" id="srv_domain"></span></li>
+                    <li>SRV: <span class="span_info" id="srv_data"></span></li>
+                </ul>
+            </div>
+            <div class="info" id="txt_info">
+                <h2>Record TXT info </h2>
+                <ul>
+                    <li>Domain: <span class="span_info" id="txt_domain"></span></li>
+                    <li>TXT: <span class="span_info" id="txt_data1"></span><span class="span_info" id="txt_data2"></span><span class="span_info" id="txt_data3"></span><span class="span_info" id="txt_data4"></span><span class="span_info" id="txt_data5"></span></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>

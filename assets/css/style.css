@@ -1,0 +1,434 @@
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box
+}
+:root {
+    --mau-nen:#D3D3D3;
+    --mau-button: #4CAF50;  /* Green */
+    --mau-tieude: #2f2f4c;
+    
+    --mau-nenbox: #f2f2f2;
+    --width-content100: 100%;
+    --width-content80: 80%;
+    --width-content95: 95%;
+    --width-content90: 90%;
+    --width-content70: 70%;
+    --width-content30: 30%;
+    --width-content50: 50%;
+    --width-content60: 60%;
+    --width-content40: 40%;
+    --width-content20: 20%;
+
+
+}
+body {
+    font-size: 16px;
+    line-height: 24px;
+    position: relative;
+    height: auto;
+    width: var(--width-content80);
+    margin: 0 auto;
+    background: var(--mau-nen);
+    font-family: 'Coiny', cursive;
+}
+/*tieu đề*/
+.first {
+    width: var(--width-content100);
+    height: auto;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: var(--mau-nen); /*biến*/
+
+    z-index: 2;
+}
+.first #tieude  {
+    width: var(--width-content100);
+	text-align: center; /* can giua*/
+    margin: 0 auto;
+    
+}
+.first #tieude a {
+    font-weight: 700;
+    color: #2f2f4c;
+    font-size: 52px;
+    line-height: 72px;
+
+}
+.first .box {
+    text-align: center;	
+    margin: 0 auto;
+    width: var(--width-content100);
+    overflow: auto;
+}
+.first .box input[type="submit"], .main .search_ip .box_search input[type="button"], .main .dnslookup .dns_search input[type="button"], .main .dnslookup .dns_search input[type="reset"] {
+    background-color: var(--mau-nenbox); 
+    color: black;
+    padding: 9px;
+    text-align: center;
+    margin: 15px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    cursor: pointer;
+	border-radius: 12px;
+    border: 1px solid var(--mau-nenbox);
+    height: 45px;
+}
+.first .box input[type="submit"]:hover, .main .search_ip .box_search input[type="button"]:hover, .main .dnslookup .dns_search input[type="button"]:hover, .main .dnslookup .dns_search input[type="reset"]:hover {
+    background-color: white;
+    color: black;
+	border: 1px solid var(--mau-button);
+}
+.first .box input[type="submit"]:focus, .main .search_ip .box_search input[type="button"]:focus, .main .dnslookup .dns_search input[type="button"]:focus, .main .dnslookup .dns_search input[type="reset"]:focus {
+    outline: 0!important;
+}
+.first .box input[type="search"] {
+    background-color: white; 
+    color: black;
+    padding: 8px;
+    text-align: left;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+	border-radius: 16px;	
+    border: 1px solid var(--mau-nenbox);
+    height: 45px;
+    width: 450px;
+}
+.first .box input[type="search"]:hover, .main .search_ip .box_search input[type="search"]:hover, .main .dnslookup .dns_search input[type="search"]:hover {
+    background-color: white;
+    color: black;
+	border: 1px solid var(--mau-button);
+}
+.first .box input[type="search"]::placeholder, .main .search_ip .box_search input[type="search"]::placeholder, .main .dnslookup .dns_search input[type="search"]::placeholder {
+    font-style: italic;
+}
+.first .box input[type="search"]:focus, .main .search_ip .box_search input[type="search"]:focus, .main .dnslookup .dns_search input[type="search"]:focus {
+    outline: 0!important;
+}
+/*end tieu đề*/
+/*start main */
+.main {
+    width: var(--width-content100);
+    height: auto;
+    overflow: auto;
+    position: absolute;
+    top: 140px;
+
+}
+/*start sidebar*/
+.main .sidebar {
+    width: var(--width-content30);
+    margin: 0 auto;
+    height: auto;
+    float: right;
+    background-color: var(--mau-nenbox)
+
+}
+
+.main .sidebar #info ul li > .span_info, .main .more_info ul li > .span_info, .main .search_ip .info_search ul li > .span_info, .main .dnslookup > .info ul li > .span_info {
+    font-family: 'Rancho', cursive;
+    font-size: 1.3em;
+}
+
+/*end sidebar*/
+/*start container:  link, p, a*/
+.main .container {
+    width: var(--width-content70);
+    margin: 0 auto;
+    float: left;
+    overflow: auto;
+}
+.main .container .link {
+    padding: 2px;
+    margin: 0 auto;
+    text-align: center;
+    float: left;
+    min-height: 240px;
+    min-width: 170px;
+    float: inherit;
+}
+.name-feature { /*<p>*/
+	font-size: 20px;
+	text-align: center;
+    margin: 0 0 8px 0;
+    font-weight: bold;
+}
+a {
+    font-size: 18px;
+    line-height: 14px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+	text-decoration: none; /* bo gahc chan*/
+    border-radius: 12px;
+}
+
+button {
+    background-color: var(--mau-button);
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'Rancho', cursive;
+    margin: 4px;
+    height: 2em;
+    min-width: 5em;
+    cursor: pointer;
+	border-radius: 12px;
+    border: 1px solid var(--mau-button);
+    /*ransition: all  0.5s ease-in;
+    -moz-transition: all  0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;*/
+}
+
+button:hover {
+    background-color: white; 
+    color: black;
+    /*transform: scale(1.1)*/
+}
+button:focus {
+	outline: 0!important; 
+}
+.main .sidebar #lookup {
+    text-align: center;
+    
+}
+.main .sidebar #lookup a {
+    text-align: center;
+
+}
+.main .sidebar #lookup a, #more {
+    margin-left: 15px;
+}
+.main .sidebar #lookup a:visited, #more:visited {
+    color: #0000EE;
+
+}
+.main .sidebar #lookup a:hover, #more:hover {
+    color: var(--mau-button)
+
+}
+/*end container: link, p, a*/
+/*end main*/
+
+/*start file iplookup.html*/
+.main .more_info, .main .search_ip, .main .dnslookup {
+    width: var(--width-content70);
+    height: auto;
+    margin: 0 auto;
+    overflow: auto;
+    box-shadow: 0px 0px 10px var(--mau-nenbox);
+}
+
+.main .sidebar h2, .main .more_info h2, .main .search_ip .info_search h2, .main .search_ip h2, .main .dnslookup h2 {
+    background-color: var(--mau-button);
+    text-align: center;
+    padding: 5px 0 5px 0;
+    margin: 0;
+}
+
+.main .search_ip .box_search, .main .dnslookup .dns_search {
+    text-align: center;
+
+}
+.main .search_ip .box_search input[type="search"], .main .dnslookup .dns_search input[type="search"]{
+    background-color: white; 
+    color: black;
+    padding: 8px;
+    text-align: left;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+	border-radius: 16px;	
+    border: 1px solid var(--mau-nenbox);
+    height: 45px;
+    width: 200px;
+}
+
+.main .search_ip .info_search, .main .dnslookup .info {
+    display: none;
+
+}
+/*end file iplookup.html*/
+/*start file dnslookup.html*/
+.main .dnslookup .dns_search select {
+    height: 2em;
+    width: 8em;
+    border-bottom: 3px solid var(--mau-button);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: var(--mau-nen);
+    font-size: 16px;
+    font-weight: bold;
+}
+.main .dnslookup .dns_search select:hover {
+    background-color: var(--mau-nenbox);
+}
+
+/*end file dnslookup.html*/
+/*cho giao dien mobile - PC first*/
+@media only screen and (max-width: 1219px) {
+    body {
+        width: var(--width-content90);
+    }
+    .main .container {
+        width: var(--width-content60);
+    }
+    .main .sidebar {
+        width: var(--width-content40);
+    }
+
+}
+@media only screen and (max-width: 1024px) {
+    .first .box input[type="search"] {
+        width: 350px;
+    }
+    body {
+        width: var(--width-content90);
+    }
+    .main .container {
+        width: 60%;
+   
+    }
+
+    .main .sidebar {
+        width: 40%;
+    }
+    .main .more_info, .main .search_ip, .main .dnslookup, .main .dnslookup {
+        width: var(--width-content80);
+    }
+    
+}
+@media only screen and (max-width: 944px) {
+    .main .container {
+        width: var(--width-content70);
+        overflow: auto;
+        margin: 0 auto;
+
+    }
+    .main .sidebar {
+        width: var(--width-content30);
+    }
+    .main .sidebar #lookup a {
+        display: block;
+    }
+    .main .more_info, .main .search_ip, .main .dnslookup, .main .dnslookup {
+        width: var(--width-content80);
+    }
+}
+@media only screen and (max-width: 809px) {
+    .main .container {
+        width: var(--width-content100);
+        overflow: auto;
+        margin: 0 auto;
+
+    }
+    .main .sidebar {
+        width: var(--width-content100);
+    }
+    .main .more_info, .main .search_ip, .main .dnslookup {
+        width: var(--width-content80);
+    }
+    .main .sidebar #lookup a {
+        display: inline;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .first .box input[type="search"] {
+        width: 350px;
+    }
+    .main .container {
+        width: var(--width-content100);
+        overflow: auto;
+        margin: 0 auto;
+
+    }
+    .main .sidebar {
+        width: var(--width-content100);
+    }
+    body {
+        width: var(--width-content95);
+    }
+    .main .more_info, .main .search_ip, .main .dnslookup {
+        width: var(--width-content80);
+    }
+    
+}
+/*start iphone*/
+@media only screen and (max-width: 667px), only screen and (max-width: 640px) { 
+    .first .box input[type="search"] {
+        width: 260px;
+        height: 40px;
+    }
+    .first #tieude a {
+        font-size: 40px;
+    }
+    .main .container {
+        width: var(--width-content100);
+        overflow: auto;
+        margin: 0 auto;
+
+    }
+    body {
+        width: var(--width-content95);
+    }
+    .main {
+        top: 165px;
+    }
+    .main .more_info, .main .search_ip, .main .dnslookup {
+        width: var(--width-content100);
+        float: none;
+    }
+    
+}
+
+/*end  iphone*/
+@media only screen and (max-width: 320px) {
+    .first .box input[type="search"] {
+        width: 280px;
+    }
+    .first #tieude a {
+        font-size: 38px;
+    }
+    .main .container {
+        width: var(--width-content100);
+        overflow: auto;
+        margin: 0 auto;
+
+    }
+    .main {
+        top: 175px;
+    }
+    body {
+        width: var(--width-content95);
+    }
+    .main .more_info, .main .search_ip, .main .dnslookup {
+        width: var(--width-content100);
+        float: none;
+    }
+}
+@media only screen and (max-width: 240px) {
+    .first .box input[type="search"] {
+        width: 190px;
+        height: 40px;
+    }
+    .first #tieude a {
+        font-size: 26px;
+    }
+    .main {
+        top: 175px;
+    }
+    .main .container {
+        width: var(--width-content100);
+        overflow: auto;
+        margin: 0 auto;
+
+
+    }
+    body {
+        width: var(--width-content95);
+    }
+}
