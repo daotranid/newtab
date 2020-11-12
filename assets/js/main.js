@@ -93,8 +93,9 @@ function check(){
 	var firstLink = "https://api.ipdata.co/";
 	var lastLink = "/?api-key=e42c0423b3fd0345fe27a026546e0cf664607bf3d003bc55f42d7c92";
 	var fullLink = firstLink + data + lastLink; 	
-	$.getJSON(fullLink, function(data) {  
-		//if
+	$.getJSON(fullLink, function(data) { 
+
+
 		var ipPublic = `${data.ip}`
 		document.getElementById("search_ippublic").innerHTML = ipPublic;
 		//More info IP public
@@ -137,7 +138,7 @@ function check(){
 		var timezoneAbbr = `${data.time_zone.abbr}`
 		var timezoneOffset = `${data.time_zone.offset}`
 		document.getElementById("search_time_zone").innerHTML = timezoneNane + " - " + timezoneAbbr + " - " + timezoneOffset;
-		
+
 
 	});
 
@@ -147,7 +148,8 @@ function dnslookup(){
 	//hien ket qua
 	//document.getElementById("info_search").style.display = 'block';
 	var dnsNanme = document.getElementById('dns_name').value; //lấy IP từ thẻ input id=type_dns
-	var typeRecord = document.getElementById('type_record').value;
+	var typeRecord = "A"  //default là record A
+	typeRecord = document.getElementById('type_record').value;
 	
 	var firstLink = "https://dns.google.com/resolve?name=";
 	var lastLink = "&type=";
@@ -359,4 +361,13 @@ setTimeout("getIPPublic()", 1000)
 getIPLocal(function(ip){
 	document.getElementById("iplocal").innerHTML = ip;
 });
-
+// #10 enter to submit
+document.onkeydown=function(evt){
+	var keyCode = evt ? (evt.which ? evt.which : evt.keyCode) : event.keyCode;
+	if(keyCode == 13)
+	{
+		//your function call here
+		document.getElementById('myBtn').onclick();
+	}
+}
+/// #10 end
