@@ -42,11 +42,11 @@ function getIPPublic(){
 	$.getJSON('https://api.ipdata.co/?api-key=e42c0423b3fd0345fe27a026546e0cf664607bf3d003bc55f42d7c92', function(data) {       
         var ip = `${data.ip}`
 		document.getElementById("ippublic").innerHTML = ip;
-		//More info IP public
+		//More info IP public file more info
 		var organisation = `${data.asn.name}`
 		document.getElementById("organisation").innerHTML = organisation;
 		var isp_domain = `${data.asn.domain}`
-		document.getElementById("isp_domain").innerHTML = isp_domain;
+		document.getElementById("isp_domain").innerHTML = "<a href='http://" + isp_domain +  "' target='_blank' title='" + isp_domain + "'>" + isp_domain + "</a>";
 		var isp_route = `${data.asn.route}`
 		document.getElementById("isp_route").innerHTML = isp_route;
 		var city = `${data.city}`
@@ -102,7 +102,7 @@ function check(){
 		var organisation = `${data.asn.name}`
 		document.getElementById("search_organisation").innerHTML = organisation;
 		var isp_domain = `${data.asn.domain}`
-		document.getElementById("search_domain").innerHTML = isp_domain;
+		document.getElementById("search_domain").innerHTML = "<a href='http://" + isp_domain +  "' target='_blank' title='" + isp_domain + "'>" + isp_domain + "</a>";
 		var isp_route = `${data.asn.route}`
 		document.getElementById("search_route").innerHTML = isp_route;
 		var city = `${data.city}`
@@ -167,7 +167,7 @@ function dnslookup(){
 			document.getElementById("srv_info").style.display = 'none';
 			document.getElementById("txt_info").style.display = 'none';
 			var domain = `${data.Question[0].name}`
-			document.getElementById("a_domain").innerHTML = domain;
+			document.getElementById("a_domain").innerHTML = "<a href='http://" + domain +  "' target='_blank' title='" + domain + "'>" + domain + "</a>";
 			var ip1 = `${data.Answer[0].data}`
 			document.getElementById("a_ip1").innerHTML = ip1;
 			var ip2 = `${data.Answer[1].data}`
@@ -185,7 +185,7 @@ function dnslookup(){
 			document.getElementById("srv_info").style.display = 'none';
 			document.getElementById("txt_info").style.display = 'none';
 			var domain = `${data.Question[0].name}`
-			document.getElementById("cname_domain").innerHTML = domain;
+			document.getElementById("cname_domain").innerHTML = "<a href='http://" + domain +  "' target='_blank' title='" + domain + "'>" + domain + "</a>";
 			var data = `${data.Authority[0].data}`
 			document.getElementById("cname_data").innerHTML = data;
 			
@@ -200,7 +200,7 @@ function dnslookup(){
 			document.getElementById("srv_info").style.display = 'none';
 			document.getElementById("txt_info").style.display = 'none';
 			var domain = `${data.Question[0].name}`
-			document.getElementById("mx_domain").innerHTML = domain;
+			document.getElementById("mx_domain").innerHTML = "<a href='http://" + domain +  "' target='_blank' title='" + domain + "'>" + domain + "</a>";
 			var data1 = `${data.Answer[0].data}`
 			document.getElementById("mx_data1").innerHTML = "<br/>" + data1;
 			var data2 = `${data.Answer[1].data}`
@@ -224,7 +224,7 @@ function dnslookup(){
 			document.getElementById("srv_info").style.display = 'none';
 			document.getElementById("txt_info").style.display = 'none';
 			var domain = `${data.Question[0].name}`
-			document.getElementById("ns_domain").innerHTML =  domain;
+			document.getElementById("ns_domain").innerHTML =  "<a href='http://" + domain +  "' target='_blank' title='" + domain + "'>" + domain + "</a>";
 			var data1 = `${data.Answer[0].data}`
 			document.getElementById("ns_data1").innerHTML = "<br/>" + data1;
 			var data2 = `${data.Answer[1].data}`
@@ -247,7 +247,7 @@ function dnslookup(){
 			document.getElementById("srv_info").style.display = 'none';
 			document.getElementById("txt_info").style.display = 'none';
 			var domain = `${data.Question[0].name}`
-			document.getElementById("ptr_domain").innerHTML = domain;
+			document.getElementById("ptr_domain").innerHTML = "<a href='http://" + domain +  "' target='_blank' title='" + domain + "'>" + domain + "</a>";
 			var data = `${data.Authority[0].data}`
 			document.getElementById("ptr_data").innerHTML = data;
 			
@@ -262,7 +262,7 @@ function dnslookup(){
 			document.getElementById("srv_info").style.display = 'none';
 			document.getElementById("txt_info").style.display = 'none';
 			var domain = `${data.Question[0].name}`
-			document.getElementById("soa_domain").innerHTML = domain;
+			document.getElementById("soa_domain").innerHTML = "<a href='http://" + domain +  "' target='_blank' title='" + domain + "'>" + domain + "</a>";
 			var data = `${data.Answer[0].data}`
 			document.getElementById("soa_data").innerHTML = data;
 			
@@ -277,7 +277,7 @@ function dnslookup(){
 			document.getElementById("srv_info").style.display = 'block';
 			document.getElementById("txt_info").style.display = 'none';
 			var domain = `${data.Question[0].name}`
-			document.getElementById("srv_domain").innerHTML = domain;
+			document.getElementById("srv_domain").innerHTML = "<a href='http://" + domain +  "' target='_blank' title='" + domain + "'>" + domain + "</a>";
 			var data = `${data.Authority[0].data}`
 			document.getElementById("srv_data").innerHTML = data;
 			
@@ -292,7 +292,7 @@ function dnslookup(){
 			document.getElementById("srv_info").style.display = 'none';
 			document.getElementById("txt_info").style.display = 'block';
 			var domain = `${data.Question[0].name}`
-			document.getElementById("txt_domain").innerHTML = domain;
+			document.getElementById("txt_domain").innerHTML = "<a href='http://" + domain +  "' target='_blank' title='" + domain + "'>" + domain + "</a>";
 			var data1 = `${data.Answer[0].data}`
 			document.getElementById("txt_data1").innerHTML = "<br/>" + data1;
 			var data2 = `${data.Answer[0].data}`
