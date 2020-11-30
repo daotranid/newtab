@@ -89,7 +89,9 @@ function check(){
 	//hien ket qua
 	document.getElementById("info_search").style.display = 'block';
 	var data = document.getElementById('type_ip').value; //lấy IP từ thẻ input id=typeip
+	//30/11/2020
 	
+
 	var firstLink = "https://api.ipdata.co/";
 	var lastLink = "/?api-key=e42c0423b3fd0345fe27a026546e0cf664607bf3d003bc55f42d7c92";
 	var fullLink = firstLink + data + lastLink; 	
