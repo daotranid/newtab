@@ -1,7 +1,7 @@
 <?php
 $serverName = "192.168.10.248";
 $connectionOptions = array(
-    "database" => "casa",
+    "database" => "QuanLyChungCu",
     "uid" => "sa",
     "pwd" => "bhk111!!!"
 );
